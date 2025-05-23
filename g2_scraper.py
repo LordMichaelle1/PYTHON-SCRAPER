@@ -8,8 +8,52 @@ import time
 import re
 import csv
 
-# G2 Category URL to scrape
-G2_URL = "https://www.g2.com/categories/marketing-automation"
+def get_user_input():
+    """Get G2 category URL, start page, and number of companies to scrape from user."""
+    while True:
+        # Get the base URL (without page parameter if it exists)
+        url = input("Enter G2 category URL (e.g., https://www.g2.com/categories/marketing-automation): ").strip()
+        
+        # Remove any existing page parameter and fragment
+        url = re.sub(r'[&?]page=\d+', '', url.split('#')[0])
+        
+        # Ensure it's a valid G2 category URL
+        if not url.startswith('https://www.g2.com/categories/'):
+            print("Error: URL must be a G2 category URL starting with 'https://www.g2.com/categories/'")
+            continue
+            
+        # Add order parameter if not present (to ensure consistent sorting)
+        if 'order=' not in url:
+            url += '&' if '?' in url else '?'
+            url += 'order=g2_score'
+            
+        try:
+            start_page = int(input("Enter page number to start from (press Enter for page 1): ") or "1")
+            if start_page < 1:
+                print("Start page must be 1 or greater.")
+                continue
+                
+            max_companies = int(input("Enter maximum number of companies to scrape (or press Enter for all): ") or "0")
+            if max_companies < 0:
+                print("Please enter a positive number or press Enter for all companies.")
+                continue
+                
+            max_pages = int(input("Enter maximum number of pages to scrape (or press Enter for all): ") or "0")
+            if max_pages < 0:
+                print("Please enter a positive number or press Enter for all pages.")
+                continue
+                
+            break
+        except ValueError:
+            print("Please enter valid numbers.")
+    
+    return url, start_page, max_companies, max_pages
+
+# Get user input for G2 URL and scraping parameters
+G2_URL, START_PAGE, MAX_COMPANIES, MAX_PAGES = get_user_input()
+
+# Initialize the current page
+current_page_g2 = START_PAGE - 1  # Will be incremented to START_PAGE in the first iteration
 
 # Your Bright Data Selenium HTTPS endpoint URL
 YOUR_BRIGHTDATA_SELENIUM_URL = "https://brd-customer-hl_9b47d1b3-zone-scraping_browser2:xwd6horlvuqf@brd.superproxy.io:9515"
@@ -260,9 +304,77 @@ try:
     # Selector for the container of each product listing on G2
     product_container_selector_g2 = "div.product-card.x-software-component-card"
     current_page_g2 = 1
+    visited_urls = set()  # Track visited URLs to prevent duplicates
     
     # Pagination loop
+    page_count = 0
+    
+    # Main pagination loop
     while True:
+        # Check if we've reached the maximum number of pages or companies
+        if (MAX_PAGES > 0 and page_count >= MAX_PAGES) or \
+           (MAX_COMPANIES > 0 and len(all_g2_product_data) >= MAX_COMPANIES):
+            if MAX_PAGES > 0 and page_count >= MAX_PAGES:
+                print(f"\nReached the maximum of {MAX_PAGES} pages. Stopping...")
+            if MAX_COMPANIES > 0 and len(all_g2_product_data) >= MAX_COMPANIES:
+                print(f"\nReached the maximum of {MAX_COMPANIES} companies. Stopping...")
+            break
+            
+        page_count += 1
+        current_page_g2 = (START_PAGE - 1) + page_count  # Calculate current page number
+        
+        # Construct the page URL
+        separator = '&' if '?' in G2_URL else '?'
+        page_url = f"{G2_URL}{separator}page={current_page_g2}#product-list"
+        
+        print(f"\n{'='*50}")
+        print(f"SCRAPING G2 PAGE {current_page_g2}")
+        print(f"{'='*50}")
+        print(f"URL: {page_url}")
+        
+        # Navigate to the specific page
+        try:
+            driver.get(page_url)
+            
+            # Wait for the page to load and check for product listings
+            try:
+                WebDriverWait(driver, 20).until(
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, product_container_selector_g2))
+                )
+                # Additional check to ensure products are loaded
+                listings = driver.find_elements(By.CSS_SELECTOR, product_container_selector_g2)
+                if not listings:
+                    print(f"No product listings found on page {current_page_g2}. This might be the last page.")
+                    break
+                    
+                print(f"Successfully loaded page {current_page_g2} with {len(listings)} listings")
+                
+            except TimeoutException:
+                print(f"Timed out waiting for page {current_page_g2} to load. It might not exist or the page structure is different.")
+                # Try to check if we've reached the end of results
+                if "No results match" in driver.page_source:
+                    print("Reached the end of search results.")
+                break
+                
+            except Exception as e:
+                print(f"Error loading page {current_page_g2}: {str(e)}")
+                # Take a screenshot for debugging
+                try:
+                    driver.save_screenshot(f"error_page_{current_page_g2}.png")
+                    print(f"Screenshot saved as error_page_{current_page_g2}.png")
+                except:
+                    pass
+                break
+                
+        except Exception as e:
+            print(f"Error navigating to page {current_page_g2}: {str(e)}")
+            break
+        current_url = driver.current_url
+        if current_url in visited_urls:
+            print(f"Already visited this URL: {current_url}. Stopping pagination.")
+            break
+            
+        visited_urls.add(current_url)
         print(f"\n{'='*50}")
         print(f"SCRAPING G2 PAGE {current_page_g2}")
         print(f"{'='*50}")
@@ -298,121 +410,115 @@ try:
             print("-" * 40)
 
             # Process each product listing
-            for index, listing_container in enumerate(product_listings_g2):
-                print(f"Processing G2 listing {index + 1} on page {current_page_g2}...")
-                
-                # Extract product data (including website URL)
-                product_data = extract_product_data_from_listing(listing_container)
-                
-                # Display extracted data
-                print(f"  Product Name: {product_data['product_name']}")
-                print(f"  G2 Profile Link: {product_data['g2_profile_link']}")
-                print(f"  Average Rating: {product_data['average_rating']}")
-                print(f"  Review Count: {product_data['review_count']}")
-                print(f"  Company Website: {product_data['website_url']}")
-                print("-" * 40)
-                
-                # Store complete product data
-                all_g2_product_data.append({
-                    "Product Name": product_data['product_name'],
-                    "G2 Profile Link": product_data['g2_profile_link'],
-                    "Average Rating": product_data['average_rating'],
-                    "Review Count": product_data['review_count'],
-                    "Company Website URL": product_data['website_url'],
-                    "Other Details": "N/A"
-                })
-                
-                # Small delay between products to be respectful
-                time.sleep(1)
-
-        # Attempt to find and click the "Next" pagination button
-        print(f"\nLooking for 'Next' pagination button on page {current_page_g2}...")
-        try:
-            # Try multiple selectors for the Next button
-            next_button_selectors = [
-                "a.pagination__named-link[href*='page=']",
-                "a[href*='page=']:contains('Next')",
-                "//a[@class='pagination__named-link' and contains(text(),'Next')]",
-                "//a[contains(@class,'pagination') and contains(text(),'Next')]"
-            ]
-            
-            next_button = None
-            for selector in next_button_selectors:
+            for index in range(len(product_listings_g2)):
                 try:
-                    if selector.startswith("//"):
-                        # XPath selector
-                        next_button = driver.find_element(By.XPATH, selector)
-                    else:
-                        # CSS selector
-                        next_button = driver.find_element(By.CSS_SELECTOR, selector)
+                    # Refresh the listing containers to avoid stale elements
+                    listing_containers = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, product_container_selector_g2)))
+                    if index >= len(listing_containers):
+                        print(f"Warning: Listing container at index {index} not found. Skipping...")
+                        continue
+                        
+                    listing_container = listing_containers[index]
                     
-                    # Verify it's actually the next button
-                    if 'next' in next_button.text.lower() or '›' in next_button.text:
-                        break
-                    else:
-                        next_button = None
-                except NoSuchElementException:
+                    # Scroll the listing into view to ensure it's fully loaded
+                    driver.execute_script("arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});", listing_container)
+                    time.sleep(0.5)  # Small delay for any lazy loading
+                    
+                    print(f"Processing G2 listing {index + 1} on page {current_page_g2}...")
+                    
+                    # Extract product data with error handling
+                    try:
+                        product_data = extract_product_data_from_listing(listing_container)
+                        
+                        # Display extracted data
+                        print(f"  Product Name: {product_data['product_name']}")
+                        print(f"  G2 Profile Link: {product_data['g2_profile_link']}")
+                        print(f"  Average Rating: {product_data['average_rating']}")
+                        print(f"  Review Count: {product_data['review_count']}")
+                        print(f"  Company Website: {product_data['website_url']}")
+                        print("-" * 40)
+                        
+                        # Check for duplicates before adding
+                        product_url = product_data.get('g2_profile_link', '')
+                        if any(p.get('G2 Profile Link') == product_url for p in all_g2_product_data):
+                            print(f"Skipping duplicate product: {product_data.get('product_name')}")
+                            continue
+                            
+                        # Store complete product data
+                        all_g2_product_data.append({
+                            "Product Name": product_data['product_name'],
+                            "G2 Profile Link": product_data['g2_profile_link'],
+                            "Average Rating": product_data['average_rating'],
+                            "Review Count": product_data['review_count'],
+                            "Company Website URL": product_data['website_url'],
+                            "Other Details": "N/A"
+                        })
+                        
+                        # Check if we've reached the maximum number of companies
+                        if MAX_COMPANIES > 0 and len(all_g2_product_data) >= MAX_COMPANIES:
+                            print(f"\nReached the maximum of {MAX_COMPANIES} companies. Stopping...")
+                            break
+                            
+                    except Exception as e:
+                        print(f"Error processing listing {index + 1}: {str(e)}")
+                        continue
+                        
+                    # Small delay between products to be respectful
+                    time.sleep(1.5)  # Reduced from 2 to 1.5 seconds to be faster but still gentle
+                    
+                except Exception as e:
+                    print(f"Error getting listing container {index + 1}: {str(e)}")
                     continue
-            
-            if next_button:
-                print(f"Found 'Next' button. Navigating to page {current_page_g2 + 1}...")
-                
-                # Scroll to next button and click
-                driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
-                time.sleep(1)
-                
-                try:
-                    next_button.click()
-                except WebDriverException:
-                    # Try JavaScript click as fallback
-                    driver.execute_script("arguments[0].click();", next_button)
-                
-                current_page_g2 += 1
-                
-                # Wait for new page to load
-                expected_url_pattern = f"page={current_page_g2}"
-                try:
-                    WebDriverWait(driver, 15).until(
-                        lambda d: expected_url_pattern in d.current_url
-                    )
-                    print(f"Successfully navigated to page {current_page_g2}")
-                    
-                    # Wait for new product listings to load with improved robustness
-                    WebDriverWait(driver, 15).until(
-                        EC.presence_of_all_elements_located((By.CSS_SELECTOR, product_container_selector_g2))
-                    )
-                    
-                    # Additional wait to ensure page content is fully loaded
-                    time.sleep(2)
-                    print(f"Page {current_page_g2} loaded successfully")
-                    
-                except TimeoutException:
-                    print(f"Timeout waiting for page {current_page_g2} to load properly")
-                    break
-                    
-            else:
-                print("No 'Next' pagination button found. Reached the last page.")
-                break
-                
-        except Exception as e:
-            print(f"Error during pagination: {e}")
+
+        # After processing the page, check if we've reached the maximum number of companies
+        if MAX_COMPANIES > 0 and len(all_g2_product_data) >= MAX_COMPANIES:
+            print(f"\nReached the maximum of {MAX_COMPANIES} companies. Stopping...")
             break
+            
+        # Check if we've reached the last page by looking for "No results" message
+        if "No results match" in driver.page_source:
+            print("\nReached the end of search results.")
+            break
+            
+        # Check if the current page has fewer items than expected (might be the last page)
+        try:
+            listings = driver.find_elements(By.CSS_SELECTOR, product_container_selector_g2)
+            if not listings:
+                print("\nNo more product listings found. Reached the end of results.")
+                break
+        except:
+            pass
+            
+        # Small delay before loading the next page
+        time.sleep(1)
+            
+except Exception as e:
+    print(f"Error during pagination: {e}")
 
     # Save data to CSV
     if all_g2_product_data:
-        csv_filename = "g2_data.csv"
-        print(f"\nSaving {len(all_g2_product_data)} products to {csv_filename}...")
+        # Generate filename from category name
+        category_name = G2_URL.rstrip('/').split('/')[-1]
+        csv_filename = f"g2_{category_name}_{int(time.time())}.csv"
+        
+        # Limit the number of companies if MAX_COMPANIES is set
+        companies_to_save = all_g2_product_data
+        if MAX_COMPANIES > 0 and len(all_g2_product_data) > MAX_COMPANIES:
+            companies_to_save = all_g2_product_data[:MAX_COMPANIES]
+            print(f"\nLimiting to {MAX_COMPANIES} companies as requested...")
+        
+        print(f"\nSaving {len(companies_to_save)} products to {csv_filename}...")
         
         with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
             fieldnames = ['Product Name', 'G2 Profile Link', 'Average Rating', 'Review Count', 'Company Website URL', 'Other Details']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             
             writer.writeheader()
-            for product in all_g2_product_data:
+            for product in companies_to_save:
                 writer.writerow(product)
         
         print(f"Data successfully saved to {csv_filename}")
-        print("Note: External website URL extraction enabled only for the first product on the first page using 'Seller Details' tab method")
+        print(f"Scraped {len(companies_to_save)} out of {len(all_g2_product_data)} available companies")
     else:
         print("No data collected to save.")
 

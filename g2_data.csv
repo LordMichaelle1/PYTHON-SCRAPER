@@ -1,14 +1,14 @@
 Product Name,G2 Profile Link,Average Rating,Review Count,Company Website URL,Other Details
 HubSpot Marketing Hub,https://www.g2.com/products/hubspot-marketing-hub/reviews,4.4,"12,547",https://www.HubSpot.com,N/A
-Insider,https://www.g2.com/products/insider/reviews,4.8,"1,116",https://www.useinsider.com,N/A
-ActiveCampaign,https://www.g2.com/products/activecampaign/reviews,4.5,"14,004",https://www.activecampaign.com,N/A
+Insider,https://www.g2.com/products/insider/reviews,4.8,"1,117",https://www.useinsider.com,N/A
+ActiveCampaign,https://www.g2.com/products/activecampaign/reviews,4.5,"14,005",https://www.activecampaign.com,N/A
 Braze,https://www.g2.com/products/braze/reviews,4.5,"1,169",https://www.braze.com,N/A
 Intuit Mailchimp All-in-One Marketing Platform,https://www.g2.com/products/intuit-mailchimp-all-in-one-marketing-platform/reviews,4.4,"5,286",https://mailchimp.com,N/A
-HighLevel,https://www.g2.com/products/highlevel/reviews,4.6,467,https://gohighlevel.com,N/A
+HighLevel,https://www.g2.com/products/highlevel/reviews,4.6,468,https://gohighlevel.com,N/A
 Thryv,https://www.g2.com/products/thryv/reviews,4.6,415,https://Thryv.com,N/A
 Dotdigital,https://www.g2.com/products/dotdigital/reviews,4.3,"1,027",https://www.dotdigital.com,N/A
-CleverTap,https://www.g2.com/products/clevertap/reviews,4.6,607,https://clevertap.com/,N/A
-Customer.io,https://www.g2.com/products/customer-io/reviews,4.4,518,https://customer.io/,N/A
+CleverTap,https://www.g2.com/products/clevertap/reviews,4.6,608,https://clevertap.com/,N/A
+Customer.io,https://www.g2.com/products/customer-io/reviews,4.4,520,https://customer.io/,N/A
 Iterable,https://www.g2.com/products/iterable/reviews,4.4,669,https://www.iterable.com,N/A
 Adobe Marketo Engage,https://www.g2.com/products/adobe-marketo-engage/reviews,4.1,"2,947",https://adobe.com,N/A
 Bloomreach,https://www.g2.com/products/bloomreach-bloomreach/reviews,4.6,668,https://www.bloomreach.com,N/A
@@ -26,13 +26,13 @@ edrone,https://www.g2.com/products/edrone/reviews,4.8,241,N/A,N/A
 Levitate,https://www.g2.com/products/levitate/reviews,4.6,115,https://www.levitate.ai/,N/A
 vcita,https://www.g2.com/products/vcita/reviews,4.6,74,N/A,N/A
 Retention Science,https://www.g2.com/products/retention-science/reviews,4.5,31,N/A,N/A
-Textedly,https://www.g2.com/products/textedly/reviews,4.6,"1,043",https://www.textedly.com/,N/A
-Cordial,https://www.g2.com/products/cordial/reviews,4.6,51,https://www.cordial.com/,N/A
+Textedly,https://www.g2.com/products/textedly/reviews,4.6,"1,045",https://www.textedly.com/,N/A
+Cordial,https://www.g2.com/products/cordial/reviews,4.6,52,https://www.cordial.com/,N/A
 Brevo Customer Data Platform,https://www.g2.com/products/brevo-customer-data-platform/reviews,4.7,71,https://www.brevo.com/,N/A
 GetResponse MAX,https://www.g2.com/products/getresponse-max/reviews,4.2,291,https://www.getresponse.com/,N/A
 SAP Emarsys,https://www.g2.com/products/sap-emarsys/reviews,4.3,442,https://www.sap.com/,N/A
 Constant Contact Advanced Automation,https://www.g2.com/products/constant-contact-advanced-automation/reviews,4.4,931,https://www.constantcontact.com/home,N/A
-Evam,https://www.g2.com/products/evam/reviews,4.8,93,https://evam.com/,N/A
+Evam,https://www.g2.com/products/evam/reviews,4.8,94,https://evam.com/,N/A
 eSputnik,https://www.g2.com/products/esputnik/reviews,4.8,62,N/A,N/A
 SALESmanago,https://www.g2.com/products/salesmanago/reviews,4.4,305,N/A,N/A
 Optimove,https://www.g2.com/products/optimove/reviews,4.6,217,https://www.optimove.com,N/A
@@ -44,3 +44,198 @@ Contlo,https://www.g2.com/products/contlo-marketing/reviews,4.6,405,https://cont
 AVADA,https://www.g2.com/products/avada/reviews,4.9,213,N/A,N/A
 Activepieces,https://www.g2.com/products/activepieces/reviews,4.8,129,N/A,N/A
 Listrak,https://www.g2.com/products/listrak/reviews,4.6,281,https://www.listrak.com,N/A
+Netcore Customer Engagement and Experience Platform,https://www.g2.com/products/netcore-customer-engagement-and-experience-platform/reviews,4.5,466,https://netcorecloud.com/,N/A
+,https://www.g2.com/products/comarch-marketing-automation/reviews,N/A,N/A,N/A,N/A
+,https://www.g2.com/products/klaviyo/reviews,N/A,N/A,https://www.klaviyo.com/,N/A
+,https://www.g2.com/products/contactpigeon/reviews,N/A,N/A,https://www.contactpigeon.com,N/A
+,https://www.g2.com/products/omnisend/reviews,N/A,N/A,https://www.omnisend.com/,N/A
+,https://www.g2.com/products/moengage/reviews,N/A,N/A,https://www.moengage.com/,N/A
+,https://www.g2.com/products/appier-aiqua/reviews,N/A,N/A,N/A,N/A
+,https://www.g2.com/products/hcl-unica/reviews,N/A,N/A,N/A,N/A
+,https://www.g2.com/products/edrone/reviews,N/A,N/A,N/A,N/A
+,https://www.g2.com/products/levitate/reviews,N/A,N/A,https://www.levitate.ai/,N/A
+,https://www.g2.com/products/vcita/reviews,N/A,N/A,N/A,N/A
+,https://www.g2.com/products/retention-science/reviews,N/A,N/A,N/A,N/A
+,https://www.g2.com/products/textedly/reviews,N/A,N/A,https://www.textedly.com/,N/A
+,https://www.g2.com/products/cordial/reviews,N/A,N/A,https://www.cordial.com/,N/A
+,https://www.g2.com/products/brevo-customer-data-platform/reviews,N/A,N/A,https://www.brevo.com/,N/A
+GetResponse MAX,https://www.g2.com/products/getresponse-max/reviews,4.2,291,https://www.getresponse.com/,N/A
+SAP Emarsys,https://www.g2.com/products/sap-emarsys/reviews,4.3,442,https://www.sap.com/,N/A
+Constant Contact Advanced Automation,https://www.g2.com/products/constant-contact-advanced-automation/reviews,4.4,931,https://www.constantcontact.com/home,N/A
+Evam,https://www.g2.com/products/evam/reviews,4.8,94,https://evam.com/,N/A
+eSputnik,https://www.g2.com/products/esputnik/reviews,4.8,62,N/A,N/A
+SALESmanago,https://www.g2.com/products/salesmanago/reviews,4.4,305,N/A,N/A
+Optimove,https://www.g2.com/products/optimove/reviews,4.6,217,https://www.optimove.com,N/A
+Plum,https://www.g2.com/products/xoxoday-plum/reviews,4.6,553,N/A,N/A
+Salesforce Marketing Cloud Account Engagement,https://www.g2.com/products/salesforce-marketing-cloud-account-engagement/reviews,4.0,"2,390",https://www.salesforce.com/,N/A
+OneSignal,https://www.g2.com/products/onesignal/reviews,4.7,981,https://www.onesignal.com,N/A
+ProFundCom,https://www.g2.com/products/profundcom/reviews,4.9,26,https://profundcom.net/,N/A
+Contlo,https://www.g2.com/products/contlo-marketing/reviews,4.6,405,https://contlo.com,N/A
+AVADA,https://www.g2.com/products/avada/reviews,4.9,213,N/A,N/A
+Activepieces,https://www.g2.com/products/activepieces/reviews,4.8,129,N/A,N/A
+Listrak,https://www.g2.com/products/listrak/reviews,4.6,281,https://www.listrak.com,N/A
+Netcore Customer Engagement and Experience Platform,https://www.g2.com/products/netcore-customer-engagement-and-experience-platform/reviews,4.5,466,https://netcorecloud.com/,N/A
+Comarch Marketing Automation,https://www.g2.com/products/comarch-marketing-automation/reviews,4.5,12,N/A,N/A
+Klaviyo,https://www.g2.com/products/klaviyo/reviews,4.6,"1,072",https://www.klaviyo.com/,N/A
+ContactPigeon,https://www.g2.com/products/contactpigeon/reviews,4.9,232,https://www.contactpigeon.com,N/A
+Omnisend,https://www.g2.com/products/omnisend/reviews,4.6,935,https://www.omnisend.com/,N/A
+MoEngage,https://www.g2.com/products/moengage/reviews,4.5,505,https://www.moengage.com/,N/A
+Appier AIQUA,https://www.g2.com/products/appier-aiqua/reviews,4.6,22,N/A,N/A
+HCL Unica,https://www.g2.com/products/hcl-unica/reviews,4.2,127,N/A,N/A
+edrone,https://www.g2.com/products/edrone/reviews,4.8,241,N/A,N/A
+Levitate,https://www.g2.com/products/levitate/reviews,4.6,115,https://www.levitate.ai/,N/A
+vcita,https://www.g2.com/products/vcita/reviews,4.6,74,N/A,N/A
+Retention Science,https://www.g2.com/products/retention-science/reviews,4.5,31,N/A,N/A
+Textedly,https://www.g2.com/products/textedly/reviews,4.6,"1,045",https://www.textedly.com/,N/A
+Cordial,https://www.g2.com/products/cordial/reviews,4.6,52,https://www.cordial.com/,N/A
+Brevo Customer Data Platform,https://www.g2.com/products/brevo-customer-data-platform/reviews,4.7,71,https://www.brevo.com/,N/A
+GetResponse MAX,https://www.g2.com/products/getresponse-max/reviews,4.2,291,https://www.getresponse.com/,N/A
+SAP Emarsys,https://www.g2.com/products/sap-emarsys/reviews,4.3,442,https://www.sap.com/,N/A
+Constant Contact Advanced Automation,https://www.g2.com/products/constant-contact-advanced-automation/reviews,4.4,931,https://www.constantcontact.com/home,N/A
+Evam,https://www.g2.com/products/evam/reviews,4.8,94,https://evam.com/,N/A
+eSputnik,https://www.g2.com/products/esputnik/reviews,4.8,62,N/A,N/A
+SALESmanago,https://www.g2.com/products/salesmanago/reviews,4.4,305,N/A,N/A
+Optimove,https://www.g2.com/products/optimove/reviews,4.6,217,https://www.optimove.com,N/A
+Plum,https://www.g2.com/products/xoxoday-plum/reviews,4.6,553,N/A,N/A
+Salesforce Marketing Cloud Account Engagement,https://www.g2.com/products/salesforce-marketing-cloud-account-engagement/reviews,4.0,"2,390",https://www.salesforce.com/,N/A
+OneSignal,https://www.g2.com/products/onesignal/reviews,4.7,981,https://www.onesignal.com,N/A
+ProFundCom,https://www.g2.com/products/profundcom/reviews,4.9,26,https://profundcom.net/,N/A
+Contlo,https://www.g2.com/products/contlo-marketing/reviews,4.6,405,https://contlo.com,N/A
+AVADA,https://www.g2.com/products/avada/reviews,4.9,213,N/A,N/A
+Activepieces,https://www.g2.com/products/activepieces/reviews,4.8,129,N/A,N/A
+Listrak,https://www.g2.com/products/listrak/reviews,4.6,281,https://www.listrak.com,N/A
+Netcore Customer Engagement and Experience Platform,https://www.g2.com/products/netcore-customer-engagement-and-experience-platform/reviews,4.5,466,https://netcorecloud.com/,N/A
+Comarch Marketing Automation,https://www.g2.com/products/comarch-marketing-automation/reviews,4.5,12,N/A,N/A
+Klaviyo,https://www.g2.com/products/klaviyo/reviews,4.6,"1,072",https://www.klaviyo.com/,N/A
+ContactPigeon,https://www.g2.com/products/contactpigeon/reviews,4.9,232,https://www.contactpigeon.com,N/A
+Omnisend,https://www.g2.com/products/omnisend/reviews,4.6,935,https://www.omnisend.com/,N/A
+MoEngage,https://www.g2.com/products/moengage/reviews,4.5,505,https://www.moengage.com/,N/A
+Appier AIQUA,https://www.g2.com/products/appier-aiqua/reviews,4.6,22,N/A,N/A
+HCL Unica,https://www.g2.com/products/hcl-unica/reviews,4.2,127,N/A,N/A
+edrone,https://www.g2.com/products/edrone/reviews,4.8,241,N/A,N/A
+Levitate,https://www.g2.com/products/levitate/reviews,4.6,115,https://www.levitate.ai/,N/A
+vcita,https://www.g2.com/products/vcita/reviews,4.6,74,N/A,N/A
+Retention Science,https://www.g2.com/products/retention-science/reviews,4.5,31,N/A,N/A
+Textedly,https://www.g2.com/products/textedly/reviews,4.6,"1,045",https://www.textedly.com/,N/A
+Cordial,https://www.g2.com/products/cordial/reviews,4.6,52,https://www.cordial.com/,N/A
+Brevo Customer Data Platform,https://www.g2.com/products/brevo-customer-data-platform/reviews,4.7,71,https://www.brevo.com/,N/A
+GetResponse MAX,https://www.g2.com/products/getresponse-max/reviews,4.2,291,https://www.getresponse.com/,N/A
+SAP Emarsys,https://www.g2.com/products/sap-emarsys/reviews,4.3,442,https://www.sap.com/,N/A
+Constant Contact Advanced Automation,https://www.g2.com/products/constant-contact-advanced-automation/reviews,4.4,931,https://www.constantcontact.com/home,N/A
+Evam,https://www.g2.com/products/evam/reviews,4.8,94,https://evam.com/,N/A
+eSputnik,https://www.g2.com/products/esputnik/reviews,4.8,62,N/A,N/A
+SALESmanago,https://www.g2.com/products/salesmanago/reviews,4.4,305,N/A,N/A
+Optimove,https://www.g2.com/products/optimove/reviews,4.6,217,https://www.optimove.com,N/A
+Plum,https://www.g2.com/products/xoxoday-plum/reviews,4.6,553,N/A,N/A
+Salesforce Marketing Cloud Account Engagement,https://www.g2.com/products/salesforce-marketing-cloud-account-engagement/reviews,4.0,"2,390",https://www.salesforce.com/,N/A
+OneSignal,https://www.g2.com/products/onesignal/reviews,4.7,981,https://www.onesignal.com,N/A
+ProFundCom,https://www.g2.com/products/profundcom/reviews,4.9,26,https://profundcom.net/,N/A
+Contlo,https://www.g2.com/products/contlo-marketing/reviews,4.6,405,https://contlo.com,N/A
+AVADA,https://www.g2.com/products/avada/reviews,4.9,213,N/A,N/A
+Activepieces,https://www.g2.com/products/activepieces/reviews,4.8,129,N/A,N/A
+Listrak,https://www.g2.com/products/listrak/reviews,4.6,281,https://www.listrak.com,N/A
+Netcore Customer Engagement and Experience Platform,https://www.g2.com/products/netcore-customer-engagement-and-experience-platform/reviews,4.5,466,https://netcorecloud.com/,N/A
+Comarch Marketing Automation,https://www.g2.com/products/comarch-marketing-automation/reviews,4.5,12,N/A,N/A
+Klaviyo,https://www.g2.com/products/klaviyo/reviews,4.6,"1,072",https://www.klaviyo.com/,N/A
+ContactPigeon,https://www.g2.com/products/contactpigeon/reviews,4.9,232,https://www.contactpigeon.com,N/A
+Omnisend,https://www.g2.com/products/omnisend/reviews,4.6,935,https://www.omnisend.com/,N/A
+MoEngage,https://www.g2.com/products/moengage/reviews,4.5,505,https://www.moengage.com/,N/A
+Appier AIQUA,https://www.g2.com/products/appier-aiqua/reviews,4.6,22,N/A,N/A
+HCL Unica,https://www.g2.com/products/hcl-unica/reviews,4.2,127,N/A,N/A
+edrone,https://www.g2.com/products/edrone/reviews,4.8,241,N/A,N/A
+Levitate,https://www.g2.com/products/levitate/reviews,4.6,115,https://www.levitate.ai/,N/A
+vcita,https://www.g2.com/products/vcita/reviews,4.6,74,N/A,N/A
+Retention Science,https://www.g2.com/products/retention-science/reviews,4.5,31,N/A,N/A
+Textedly,https://www.g2.com/products/textedly/reviews,4.6,"1,045",https://www.textedly.com/,N/A
+Cordial,https://www.g2.com/products/cordial/reviews,4.6,52,https://www.cordial.com/,N/A
+Brevo Customer Data Platform,https://www.g2.com/products/brevo-customer-data-platform/reviews,4.7,71,https://www.brevo.com/,N/A
+GetResponse MAX,https://www.g2.com/products/getresponse-max/reviews,4.2,291,https://www.getresponse.com/,N/A
+SAP Emarsys,https://www.g2.com/products/sap-emarsys/reviews,4.3,442,https://www.sap.com/,N/A
+Constant Contact Advanced Automation,https://www.g2.com/products/constant-contact-advanced-automation/reviews,4.4,931,https://www.constantcontact.com/home,N/A
+Evam,https://www.g2.com/products/evam/reviews,4.8,94,https://evam.com/,N/A
+eSputnik,https://www.g2.com/products/esputnik/reviews,4.8,62,N/A,N/A
+SALESmanago,https://www.g2.com/products/salesmanago/reviews,4.4,305,N/A,N/A
+Optimove,https://www.g2.com/products/optimove/reviews,4.6,217,https://www.optimove.com,N/A
+Plum,https://www.g2.com/products/xoxoday-plum/reviews,4.6,553,N/A,N/A
+Salesforce Marketing Cloud Account Engagement,https://www.g2.com/products/salesforce-marketing-cloud-account-engagement/reviews,4.0,"2,390",https://www.salesforce.com/,N/A
+OneSignal,https://www.g2.com/products/onesignal/reviews,4.7,981,https://www.onesignal.com,N/A
+ProFundCom,https://www.g2.com/products/profundcom/reviews,4.9,26,https://profundcom.net/,N/A
+Contlo,https://www.g2.com/products/contlo-marketing/reviews,4.6,405,https://contlo.com,N/A
+AVADA,https://www.g2.com/products/avada/reviews,4.9,213,N/A,N/A
+Activepieces,https://www.g2.com/products/activepieces/reviews,4.8,129,N/A,N/A
+Listrak,https://www.g2.com/products/listrak/reviews,4.6,281,https://www.listrak.com,N/A
+Netcore Customer Engagement and Experience Platform,https://www.g2.com/products/netcore-customer-engagement-and-experience-platform/reviews,4.5,466,https://netcorecloud.com/,N/A
+Comarch Marketing Automation,https://www.g2.com/products/comarch-marketing-automation/reviews,4.5,12,N/A,N/A
+Klaviyo,https://www.g2.com/products/klaviyo/reviews,4.6,"1,072",https://www.klaviyo.com/,N/A
+ContactPigeon,https://www.g2.com/products/contactpigeon/reviews,4.9,232,https://www.contactpigeon.com,N/A
+Omnisend,https://www.g2.com/products/omnisend/reviews,4.6,935,https://www.omnisend.com/,N/A
+MoEngage,https://www.g2.com/products/moengage/reviews,4.5,505,https://www.moengage.com/,N/A
+Appier AIQUA,https://www.g2.com/products/appier-aiqua/reviews,4.6,22,N/A,N/A
+HCL Unica,https://www.g2.com/products/hcl-unica/reviews,4.2,127,N/A,N/A
+edrone,https://www.g2.com/products/edrone/reviews,4.8,241,N/A,N/A
+Levitate,https://www.g2.com/products/levitate/reviews,4.6,115,https://www.levitate.ai/,N/A
+vcita,https://www.g2.com/products/vcita/reviews,4.6,74,N/A,N/A
+Retention Science,https://www.g2.com/products/retention-science/reviews,4.5,31,N/A,N/A
+Textedly,https://www.g2.com/products/textedly/reviews,4.6,"1,045",https://www.textedly.com/,N/A
+Cordial,https://www.g2.com/products/cordial/reviews,4.6,52,https://www.cordial.com/,N/A
+Brevo Customer Data Platform,https://www.g2.com/products/brevo-customer-data-platform/reviews,4.7,71,https://www.brevo.com/,N/A
+GetResponse MAX,https://www.g2.com/products/getresponse-max/reviews,4.2,291,https://www.getresponse.com/,N/A
+SAP Emarsys,https://www.g2.com/products/sap-emarsys/reviews,4.3,442,https://www.sap.com/,N/A
+Constant Contact Advanced Automation,https://www.g2.com/products/constant-contact-advanced-automation/reviews,4.4,931,https://www.constantcontact.com/home,N/A
+Evam,https://www.g2.com/products/evam/reviews,4.8,94,https://evam.com/,N/A
+eSputnik,https://www.g2.com/products/esputnik/reviews,4.8,62,N/A,N/A
+SALESmanago,https://www.g2.com/products/salesmanago/reviews,4.4,305,N/A,N/A
+Optimove,https://www.g2.com/products/optimove/reviews,4.6,217,https://www.optimove.com,N/A
+Plum,https://www.g2.com/products/xoxoday-plum/reviews,4.6,553,N/A,N/A
+Salesforce Marketing Cloud Account Engagement,https://www.g2.com/products/salesforce-marketing-cloud-account-engagement/reviews,4.0,"2,390",https://www.salesforce.com/,N/A
+OneSignal,https://www.g2.com/products/onesignal/reviews,4.7,981,https://www.onesignal.com,N/A
+ProFundCom,https://www.g2.com/products/profundcom/reviews,4.9,26,https://profundcom.net/,N/A
+Contlo,https://www.g2.com/products/contlo-marketing/reviews,4.6,405,https://contlo.com,N/A
+AVADA,https://www.g2.com/products/avada/reviews,4.9,213,N/A,N/A
+Activepieces,https://www.g2.com/products/activepieces/reviews,4.8,129,N/A,N/A
+Listrak,https://www.g2.com/products/listrak/reviews,4.6,281,https://www.listrak.com,N/A
+Netcore Customer Engagement and Experience Platform,https://www.g2.com/products/netcore-customer-engagement-and-experience-platform/reviews,4.5,466,https://netcorecloud.com/,N/A
+Comarch Marketing Automation,https://www.g2.com/products/comarch-marketing-automation/reviews,4.5,12,N/A,N/A
+Klaviyo,https://www.g2.com/products/klaviyo/reviews,4.6,"1,072",https://www.klaviyo.com/,N/A
+ContactPigeon,https://www.g2.com/products/contactpigeon/reviews,4.9,232,https://www.contactpigeon.com,N/A
+Omnisend,https://www.g2.com/products/omnisend/reviews,4.6,935,https://www.omnisend.com/,N/A
+MoEngage,https://www.g2.com/products/moengage/reviews,4.5,505,https://www.moengage.com/,N/A
+Appier AIQUA,https://www.g2.com/products/appier-aiqua/reviews,4.6,22,N/A,N/A
+HCL Unica,https://www.g2.com/products/hcl-unica/reviews,4.2,127,N/A,N/A
+edrone,https://www.g2.com/products/edrone/reviews,4.8,241,N/A,N/A
+Levitate,https://www.g2.com/products/levitate/reviews,4.6,115,https://www.levitate.ai/,N/A
+vcita,https://www.g2.com/products/vcita/reviews,4.6,74,N/A,N/A
+Retention Science,https://www.g2.com/products/retention-science/reviews,4.5,31,N/A,N/A
+Textedly,https://www.g2.com/products/textedly/reviews,4.6,"1,045",https://www.textedly.com/,N/A
+Cordial,https://www.g2.com/products/cordial/reviews,4.6,52,https://www.cordial.com/,N/A
+Brevo Customer Data Platform,https://www.g2.com/products/brevo-customer-data-platform/reviews,4.7,71,https://www.brevo.com/,N/A
+GetResponse MAX,https://www.g2.com/products/getresponse-max/reviews,4.2,291,https://www.getresponse.com/,N/A
+SAP Emarsys,https://www.g2.com/products/sap-emarsys/reviews,4.3,442,https://www.sap.com/,N/A
+Constant Contact Advanced Automation,https://www.g2.com/products/constant-contact-advanced-automation/reviews,4.4,931,https://www.constantcontact.com/home,N/A
+Evam,https://www.g2.com/products/evam/reviews,4.8,94,https://evam.com/,N/A
+eSputnik,https://www.g2.com/products/esputnik/reviews,4.8,62,N/A,N/A
+SALESmanago,https://www.g2.com/products/salesmanago/reviews,4.4,305,N/A,N/A
+Optimove,https://www.g2.com/products/optimove/reviews,4.6,217,https://www.optimove.com,N/A
+Plum,https://www.g2.com/products/xoxoday-plum/reviews,4.6,553,N/A,N/A
+Salesforce Marketing Cloud Account Engagement,https://www.g2.com/products/salesforce-marketing-cloud-account-engagement/reviews,4.0,"2,390",https://www.salesforce.com/,N/A
+OneSignal,https://www.g2.com/products/onesignal/reviews,4.7,981,https://www.onesignal.com,N/A
+ProFundCom,https://www.g2.com/products/profundcom/reviews,4.9,26,https://profundcom.net/,N/A
+Contlo,https://www.g2.com/products/contlo-marketing/reviews,4.6,405,https://contlo.com,N/A
+AVADA,https://www.g2.com/products/avada/reviews,4.9,213,N/A,N/A
+Activepieces,https://www.g2.com/products/activepieces/reviews,4.8,129,N/A,N/A
+Listrak,https://www.g2.com/products/listrak/reviews,4.6,281,https://www.listrak.com,N/A
+Netcore Customer Engagement and Experience Platform,https://www.g2.com/products/netcore-customer-engagement-and-experience-platform/reviews,4.5,466,https://netcorecloud.com/,N/A
+Comarch Marketing Automation,https://www.g2.com/products/comarch-marketing-automation/reviews,4.5,12,N/A,N/A
+Klaviyo,https://www.g2.com/products/klaviyo/reviews,4.6,"1,072",https://www.klaviyo.com/,N/A
+ContactPigeon,https://www.g2.com/products/contactpigeon/reviews,4.9,232,https://www.contactpigeon.com,N/A
+Omnisend,https://www.g2.com/products/omnisend/reviews,4.6,935,https://www.omnisend.com/,N/A
+MoEngage,https://www.g2.com/products/moengage/reviews,4.5,505,https://www.moengage.com/,N/A
+Appier AIQUA,https://www.g2.com/products/appier-aiqua/reviews,4.6,22,N/A,N/A
+HCL Unica,https://www.g2.com/products/hcl-unica/reviews,4.2,127,N/A,N/A
+edrone,https://www.g2.com/products/edrone/reviews,4.8,241,N/A,N/A
+Levitate,https://www.g2.com/products/levitate/reviews,4.6,115,https://www.levitate.ai/,N/A
+vcita,https://www.g2.com/products/vcita/reviews,4.6,74,N/A,N/A
+Retention Science,https://www.g2.com/products/retention-science/reviews,4.5,31,N/A,N/A
+Textedly,https://www.g2.com/products/textedly/reviews,4.6,"1,045",https://www.textedly.com/,N/A
+Cordial,https://www.g2.com/products/cordial/reviews,4.6,52,https://www.cordial.com/,N/A
+Brevo Customer Data Platform,https://www.g2.com/products/brevo-customer-data-platform/reviews,4.7,71,https://www.brevo.com/,N/A
