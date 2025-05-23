@@ -17,13 +17,14 @@ YOUR_BRIGHTDATA_SELENIUM_URL = "https://brd-customer-hl_9b47d1b3-zone-scraping_b
 def extract_product_data_from_listing(listing_container):
     """
     Extract product data from a single G2 product listing container.
-    Returns a dictionary with product name, G2 profile link, star rating, and review count.
+    Returns a dictionary with product name, G2 profile link, star rating, review count, and website URL.
     """
     product_data = {
         "product_name": "N/A",
         "g2_profile_link": "N/A",
         "average_rating": "N/A",
-        "review_count": "N/A"
+        "review_count": "N/A",
+        "website_url": "N/A"
     }
     
     try:
@@ -78,9 +79,20 @@ def extract_product_data_from_listing(listing_container):
     except Exception as e:
         print(f"    Error extracting product data: {e}")
     
+    # Extract Website URL if available
+    try:
+        website_url_input = listing_container.find_element(By.CSS_SELECTOR, 'input#secure_url')
+        website_url = website_url_input.get_attribute('value')
+        if website_url and website_url.strip():
+            product_data["website_url"] = website_url.strip()
+    except NoSuchElementException:
+        print("    Could not find website URL")
+    except Exception as e:
+        print(f"    Error extracting website URL: {e}")
+    
     return product_data
 
-def get_external_website_url(driver, g2_product_profile_url):
+# def get_external_website_url(driver, g2_product_profile_url):
     """
     Navigate to G2 product profile page, click the 'Seller Details' tab,
     and extract the external company website URL from the hidden input field.
@@ -289,26 +301,15 @@ try:
             for index, listing_container in enumerate(product_listings_g2):
                 print(f"Processing G2 listing {index + 1} on page {current_page_g2}...")
                 
-                # Extract basic product data
+                # Extract product data (including website URL)
                 product_data = extract_product_data_from_listing(listing_container)
-                
-                # Initialize additional fields
-                company_website_url = "N/A"
-                other_details = "N/A"
-                
-                # Get external website URL only for the FIRST product on the FIRST page (for testing)
-                if current_page_g2 == 1 and index == 0 and product_data["g2_profile_link"] != "N/A":
-                    print("Attempting to get external website URL for FIRST product using 'Seller Details' tab method...")
-                    company_website_url = get_external_website_url(driver, product_data["g2_profile_link"])
-                    # Short pause to observe the process
-                    time.sleep(2)
                 
                 # Display extracted data
                 print(f"  Product Name: {product_data['product_name']}")
                 print(f"  G2 Profile Link: {product_data['g2_profile_link']}")
                 print(f"  Average Rating: {product_data['average_rating']}")
                 print(f"  Review Count: {product_data['review_count']}")
-                print(f"  Company Website: {company_website_url}")
+                print(f"  Company Website: {product_data['website_url']}")
                 print("-" * 40)
                 
                 # Store complete product data
@@ -317,8 +318,8 @@ try:
                     "G2 Profile Link": product_data['g2_profile_link'],
                     "Average Rating": product_data['average_rating'],
                     "Review Count": product_data['review_count'],
-                    "Company Website URL": company_website_url,
-                    "Other Details": other_details
+                    "Company Website URL": product_data['website_url'],
+                    "Other Details": "N/A"
                 })
                 
                 # Small delay between products to be respectful
