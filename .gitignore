@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# Output files (like screenshots or data files, if you don't want to commit them)
+# *.png
+# *.csv 
+# If you DO want to commit your CSV, comment out or remove the *.csv line above.
+# For now, let's assume you might want to commit the current CSVs as a baseline.
+# So, you can omit *.csv for now or comment it out.
+
+# Bright Data log files if any are created
+brightdata_*.log
